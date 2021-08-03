@@ -1,0 +1,176 @@
+Link to finished CodePen: https://codepen.io/waywardpooch/pen/qBmyQgB
+
+Questions
+    1. What is Semantic HTML?
+    Semantic HTML means writing HTML in a way such that your tag-names are descriptive of their content.
+
+    2. What is HTML used for?
+    HTML is used for building the structure and content of our websites.
+
+    3. What is an attribute and where do we put it? 
+    Attributes allow us to assign values to a specific element in HTML. We place them within the opening tag of an element, for example:
+    <h1 class="title">This is a title</h1>
+    In the above code, we assign the "class" attribute to this heading-1.
+
+    4. What is the h1 tag used for? How many times should I use it on a page?
+    The h1 tag is used for writing a large title heading in HTML; because we treat it like a title (in most cases), it should only be used ONCE.
+
+    5. Name two tags that have required attributes
+    <img> tags require a "src" attribute to display a picture
+    <a> tags require an "href" attribute to link to a page
+
+    6. What do we put in the head of our HTML document?
+    We use the <head> of HTML documents to link stylesheets, provide a name for our webpage, define the viewport, and set the encoding format for our text.
+    If we write "!" then press TAB in VS Code, the head will be auto-completed from a template for us to fill in as-needed.
+
+    7. What is an id?
+    An ID is a single-use attribute for use in either linking to different places within a page, or (less commonly) styling an element in CSS.
+
+    8. What elements can I add an id to?
+    An ID can be applied to any HTML element, just like a class can.
+
+    9. How many times can I use the same id on a page?
+    An ID may only be used ONCE per page.
+
+    10. What is a class?
+    A class is an attribute that can be applied to multiple elements; it is mainly used for styling elements.
+
+    11. What elements can I add a class to?
+    Classes can be applied to any HTML element.
+
+    12. How many times can I use the same class on a page?
+    A class may be reused as many times as desired; you can even assign elements to multiple classes, if needed.
+
+    13. How do I get my link to open in a new tab?
+    Within the opening tag of an anchor element, set the "target" attribute to the string "_blank". For example:
+    <a href="https://lambdaschool.com" target="_blank">Click here to visit Lambda School's website!</a>
+
+    14. What is the alt attribute in the image tag used for?
+    The alt attribute within an image tag is used to display a desired "substitution text" in the event that an image cannot be loaded.
+
+    15. How do I reference an id?
+    In CSS, you can reference an ID by using the "#" symbol. For example, to set the font size to 12px on an element with an ID of "llama," in your CSS, write:
+    #llama {
+        font-size: 12px;
+    }
+
+    16. What is the difference between a section and a div?
+    Div elements should be placed within sections to divide them up. "Div" elements are not semantic; "section" elements are.
+
+    17. What is CSS used for? 
+    CSS is used to make websites pretty! It allows us to edit things like color, padding, margins, font sizes/styles, and much more!
+
+    18. How to we select an element? Example - every h2 on the page
+    To select every h2 element in CSS, write:
+    h2 {
+        desired-property: desired-value;
+    }
+
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one.
+    Classes can be reused multiple times on a single page, while an ID may only be used once.
+    Classes are useful for styling things like containers for holding multiple text elements or pictures.
+    IDs are useful when you only want to touch a very specific element, on a page where it would be hard to select that element otherwise.
+    Another use case for IDs would be to create "jump points" for quick navigation within the same page. 
+    For example, using IDs and anchor elements, you can easily create links to quickly pan to a contact-info box, or go back to the top of a page.
+
+    20. How do we select classes in CSS?
+    A class can be selected in CSS by using a "." followed by its name. 
+    For example, to select a class with name "container", you'd type ".container {}"
+
+    21. How do we select a p element with a single class of “human””?
+    If you mean "How do we select a p element inside of an element assigned the class of 'human'," we'd type:
+    .human p {
+        property: value;
+    }
+    Otherwise, if you mean "there's a class that exists that is only applied once, with its only real duty being to edit THAT specific 'p' element," then I'd just edit the class by itself like so:
+    .human {
+        property: value;
+    }
+
+    22. What is a parent child selector? When would this be useful?
+    Parent-Child selectors are for selecting specific "children" of a parent element.
+    For example, if you wanted to edit the FIRST "child" of an element assigned the class of "parent", you type:
+    .parent:first-child {
+        property: value;
+    }
+
+    23. How do you select all links within a div with the class of sidebar?
+    .sidebar a {
+        property: value;
+    }
+
+    24. What is a pseudo selector?
+    Pseudo selectors are used to change the styling of an element ONLY when it is in a specific state. For example, to make a button red when hovered:
+    button:hover {
+        background-color: red;
+    }
+
+    25. What do we use to change the spacing between lines?
+    We use the "line-height" property to change the spacing between lines.
+
+    26. What do we use to change the spacing between letters?
+    We use the "letter-spacing" property to change the spacing between letters.
+
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+    We use the "text-transform" property to change text to all-caps, all-lowercase, or to capitalize the first letter of every word.
+
+    28. How do I add a 1px border around my div that is dotted and black?
+    If your div had the class of "cool-border," you'd type the following CSS:
+    .cool-border {
+        border: dotted 1px black;
+    }
+
+    29. How do I select everything on the page? 
+    Use the "*" selector to select everything on a page.
+
+    30. How do I write a comment in CSS?
+    In CSS, you can write comments by opening with "/*" and closing with "*/". These can go down multiple lines, so long as you write inside them.
+
+    31. How do I find out what file I am in, when I am using the command line?
+    The "pwd" command will "print" your "working directory".
+
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+    The "ls" command will "list" the files in your current directory.
+
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+    To remove a file, you'd write "rm 'filename.extension'".
+    To remove an empty folder, type, "rmdir 'foldername'".
+    To remove a folder and everything inside it, type, "rm -r 'foldername'". You may need "root" permissions to recursively delete files, though.
+
+    34. Why should I use version control? 
+    Version control lets you save snapshots of your code at every stage you're in, as well as collaborate on a common repository without conflicting with the code of your peers.
+
+    35. How often should I commit to github?
+    As a general rule of thumb, you should commit once every 20 minutes, or whenever a major feature is completed.
+
+    36. What is the command we would use to push our repo up to github? 
+    Type "github push -u origin <branch-name>" to push your code up to a desired branch, when in the correct directory.
+
+    37. Walk me through Lambda's git flow. 
+    First, create a fork of the repository you want to edit.
+    Second, make and enter an empty folder; this will be where you'll store that repository's files.
+    Next, "clone" (copy) the forked repository into your current directory, and once that's done, enter the new folder.
+    Then, create a new branch to work on (using git checkout -b <first-last>).
+    At this point, you may now edit your local project files as desired.
+    When you want to save your changes, type "git add ." to scan/record all changes to every file in the directory.
+    Following that, commit your changes, writing a message to describe what/why you're editing (using "git commit -m '<your-message-here>'").
+    Finally, you can push your changes to the remote repository by typing "git push -u origin <first-last>".
+    After that, you can submit a pull-request for your code to await its approval for merging into the master branch.
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+    Inline elements take up only as much space as they need, while a block element will stretch to the maximum width it can take over.
+    An "in-line" element can be placed in the same line as other elements, while a block-element will break to the next available line.
+
+    2. What happens when an element is positioned absolutely?
+    An absolutely positioned element will place itself in the exact pixel it is designated to, ignoring the size of the browser.
+
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?
+    Unsure.
+
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+    <img>, <p>, <h1>-<h6> are block elements by default. <span> and <a> are inline by default. I do not know which elements are inline-block by default.
+
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them?
+    Unsure. 
